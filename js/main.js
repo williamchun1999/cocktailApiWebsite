@@ -22,9 +22,10 @@ const getDrink = (event) => {
                 for (let i = 0; i < drinks.length; i++){
                     if (flag){
                         showDrink(drinks[i].strDrink, drinks[i].strDrinkThumb, drinks[i].strInstructions);
-                        if (i === (drinks.length - 1)){
+                        
+                    }
+                    if (i === (drinks.length - 1)){
                         i = 0;
-                        }
                     }
                     await timer(2000);
                 }
@@ -35,7 +36,7 @@ const getDrink = (event) => {
         console.log(`error ${err}`);
     })
 }
-const toggleDrinks = (evt) => {
+const toggleDrinks = () => {
     flag = !flag;
 }
 document.querySelector('#toggle').addEventListener('click', toggleDrinks);
