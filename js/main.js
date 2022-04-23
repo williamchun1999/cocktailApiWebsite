@@ -22,7 +22,6 @@ const getDrink = (event) => {
                 for (let i = 0; i < drinks.length; i++){
                     if (flag){
                         showDrink(drinks[i].strDrink, drinks[i].strDrinkThumb, drinks[i].strInstructions);
-                        
                     }
                     if (i === (drinks.length - 1)){
                         i = 0;
